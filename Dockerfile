@@ -13,7 +13,9 @@ RUN curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-
 # Copy using poetry.lock* in case it doesn't exist yet
 COPY ./app/pyproject.toml ./app/poetry.lock* /app/
 
-RUN poetry install --no-root --no-dev
+# RUN poetry install --no-root --no-dev
+RUN poetry install
+
 
 COPY ./app /app
 
